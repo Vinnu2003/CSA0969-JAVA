@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class SortNames 
+{
+public static void main(String[] args) 
+{
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Banana");
+        names.add("Carrot");
+        names.add("Radish");
+        names.add("Apple");
+        names.add("Jack");
+        System.out.print("Order(A/D) : ");
+        String order = sc.nextLine();
+        if (order.equals("A")) {
+            Collections.sort(names);
+        } else if (order.equals("D")) 
+{
+            Collections.sort(names, Collections.reverseOrder());
+        }
+        System.out.println("Sorted Names: " + names);
+        sc.close();
+    }
+}
