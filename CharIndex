@@ -1,0 +1,18 @@
+public class CharIndex
+{
+public static void main(String[] args) 
+{
+        String line = "Myself Vinay Kumar CSE Department.";
+        char target = 's';
+        boolean found = false;
+        for (int i = 0; i < line.length(); i++) {
+            if (line.charAt(i) == target) {
+                System.out.println("Found '" + target + "' at index " + i);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("'" + target + "' not found in '" + line + "'");
+        }
+    }
+}
