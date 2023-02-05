@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class MergeArrays 
+{
+public static void main(String[] args) 
+{
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        arr1.add(1);
+        arr1.add(3);
+        arr1.add(4);
+arr1.add(5);
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        arr2.add(2);
+        arr2.add(4);
+        arr2.add(6);
+arr2.add(8);
+        ArrayList<Integer> result = new ArrayList<>();
+        result.addAll(arr1);
+        result.addAll(arr2);
+        Collections.sort(result);
+
+        System.out.println("Merged ArrayList: " + result);
+    }
+}
