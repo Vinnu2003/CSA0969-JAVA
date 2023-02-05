@@ -1,0 +1,12 @@
+import java.util.Arrays;
+
+public class ReverseAlphabeticalOrder {
+    public static void main(String[] args) {
+        String word = "hello";
+        char[] characters = word.toCharArray();
+        Arrays.sort(characters);
+        String sorted = new String(characters);
+        String reversed = new StringBuilder(sorted).reverse().toString();
+        System.out.println("Reverse Alphabetical Order: " + reversed);
+    }
+}
