@@ -1,0 +1,16 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class SpeChar {
+    public static void main(String[] args) {
+        String line = "This is a sample line! with #special chars. How many?12";
+        Pattern pattern = Pattern.compile("[^a-zA-Z0-9 ]");
+        Matcher matcher = pattern.matcher(line);
+        int count = 0;
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+            count++;
+        }
+        System.out.println("Number of special characters: " + count);
+    }
+}
