@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class NumEncounter {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int num, positiveCount = 0, negativeCount = 0;
+    double positiveSum = 0.0, negativeSum = 0.0;
+
+    System.out.println("Enter -1 to exit...");
+    System.out.print("Enter the number: ");
+    num = sc.nextInt();
+
+    while (num != -1) {
+      if (num > 0) {
+        positiveCount++;
+        positiveSum += num;
+      } else if (num < 0) {
+        negativeCount++;
+        negativeSum += num;
+      }
+      System.out.print("Enter the number: ");
+      num = sc.nextInt();
+    }
+    if (positiveCount > 0) {
+      System.out.println("The average of positive numbers is: " + positiveSum / positiveCount);
+    } else {
+      System.out.println("No positive numbers entered.");
+    }
+    if (negativeCount > 0) {
+      System.out.println("The average of negative numbers is: " + negativeSum / negativeCount);
+    } else {
+      System.out.println("No negative numbers entered.");
+    }
+  }
+}
